@@ -4,6 +4,7 @@
 <?php
     session_start();
 	require('connect.php');
+    $_SESSION['isVisitedEdit'] = false;
 
     $id = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
     $slug = filter_input(INPUT_GET,'slug',FILTER_SANITIZE_FULL_SPECIAL_CHARS);

@@ -5,6 +5,7 @@
 	session_start();
 	require('connect.php');
 	$_SESSION['isVisited'] = false;	
+	$_SESSION['isVisitedEdit'] = false;
 
 	if(isset($_POST['search']))
 	{
@@ -85,7 +86,7 @@
 						<div class='blog_post'>
 							<h2><a href="show.php?id=<?=$hextech['chapter_ID']?>&slug=<?=$hextech['slug']?>"><?= $hextech['chapter_name']?></a></h2>
 							<small>
-								<a href="edit.php?id=<?=$hextech['chapter_ID']?>&slug=<?=$hextech['slug']?>">Edit</a>
+								<a href="edit.php?id=<?=$hextech['chapter_ID']?>">Edit</a>
 							</small>
 						</div>
 						<div class='blog_content'>			

@@ -114,6 +114,7 @@
 				$statement = $db->prepare($query);
 				$statement->execute();
 				$fromEdit = true;
+				$_SESSION['isVisitedEdit'] = false;
 			}		
 		}
 	}
