@@ -5,23 +5,32 @@
 	session_start();
 	require('connect.php');
 
+	if(isset($_POST['search']))
+	{
+		$search_input = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+	}
+	else
+	{
+		$search_input = '';
+	}
+
 	if(isset($_GET['sort']))
 	{
 		if($_GET['sort'] === 'release')
 		{
-			$query = "SELECT * FROM chapter ORDER BY release_date";
+			$query = "SELECT * FROM chapter WHERE chapter_name LIKE '%$search_input%' ORDER BY release_date";
 			$statement = $db->prepare($query);
 			$statement->execute();
 		}
 		elseif($_GET['sort'] === 'champion')
 		{
-			$query = "SELECT * FROM chapter ORDER BY champion_name";
+			$query = "SELECT * FROM chapter WHERE chapter_name LIKE '%$search_input%' ORDER BY champion_name";
 			$statement = $db->prepare($query);
 			$statement->execute();
 		}
 		else
 		{
-			$query = "SELECT * FROM chapter ORDER BY chapter_name";
+			$query = "SELECT * FROM chapter WHERE chapter_name LIKE '%$search_input%' ORDER BY chapter_name";
 			$statement = $db->prepare($query);
 			$statement->execute();
 		}
@@ -32,7 +41,7 @@
 		$_GET['sort'] = 'title';
 		$_SESSION['sort'] = $_GET['sort'];
 
-		$query = "SELECT * FROM chapter ORDER BY chapter_name";
+		$query = "SELECT * FROM chapter WHERE chapter_name LIKE '%$search_input%' ORDER BY chapter_name";
 		$statement = $db->prepare($query);
 		$statement->execute();
 	}
@@ -65,8 +74,8 @@
 				<li><a href="admin_index.php?sort=champion"
 					<?php if($_GET['sort'] === 'champion'):?> style="color:red" <?php endif ?>>Champions</a></li>
 			</ul>
-			<form id="search_bar">
-				<input type="text" placeholder="Search..">
+			<form id="search_bar" method="post">
+				<input type="text" name='search' placeholder="Search..">
 				<button type="submit">Submit</button>
 			</form>
 			<div id="all_blogs">
