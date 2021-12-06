@@ -6,24 +6,34 @@
 	require('connect.php');
 	$_SESSION['isLogin'] = false;
 
+	if(isset($_POST['search']))
+	{
+		$search_input = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+	}
+	else
+	{
+		$search_input = '';
+	}
+
 	if(isset($_SESSION['sort']))
 	{
-		$sort = $_SESSION['sort'];
+		$sort = $_SESSION['sort'];		
+
 		if($sort === 'release')
 		{
-			$query = "SELECT * FROM chapter ORDER BY release_date";
+			$query = "SELECT * FROM chapter WHERE chapter_name LIKE '%$search_input%' ORDER BY release_date";
 			$statement = $db->prepare($query);
 			$statement->execute();
 		}
 		elseif ($sort === 'champion') 
 		{
-			$query = "SELECT * FROM chapter ORDER BY champion_name";
+			$query = "SELECT * FROM chapter WHERE chapter_name LIKE '%$search_input%' ORDER BY champion_name";
 			$statement = $db->prepare($query);
 			$statement->execute();
 		}
 		else
 		{
-			$query = "SELECT * FROM chapter ORDER BY chapter_name";
+			$query = "SELECT * FROM chapter WHERE chapter_name LIKE '%$search_input%' ORDER BY chapter_name";
 			$statement = $db->prepare($query);
 			$statement->execute();			
 		}
@@ -32,7 +42,7 @@
 	{
 		$sort = 'title';
 
-		$query = "SELECT * FROM chapter ORDER BY chapter_name";
+		$query = "SELECT * FROM chapter WHERE chapter_name LIKE '%$search_input%' ORDER BY chapter_name";
 		$statement = $db->prepare($query);
 		$statement->execute();
 	}	
@@ -63,8 +73,8 @@
 				<li>Title</li>
 			<?php endif ?>
 		</ul>
-		<form id="search_bar">
-			<input type="text" placeholder="Search..">
+		<form id="search_bar" method="post">
+			<input type="text" name="search" placeholder="Search..">
 			<button type="submit">Submit</button>
 		</form>
 		<div id="all_blogs">
