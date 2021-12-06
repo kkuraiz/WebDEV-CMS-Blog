@@ -16,7 +16,7 @@
 	}
 	$chapterTitle = filter_input(INPUT_POST, 'chapterTitle', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$champions = filter_input(INPUT_POST, 'champions', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-	$slug = filter_input(INPUT_POST, 'slug', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+	$slug_raw = filter_input(INPUT_POST, 'slug', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$description = $_POST['description'];//filter_input(INPUT_POST, 'description', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -91,6 +91,7 @@
 		else
 		{
 			require('connect.php');
+			$slug = str_replace(' ', '-', $slug_raw);
 			if($commandValue === "Create")
 			{
 				$query = "INSERT INTO chapter(chapter_name, champion_name, slug, description, image_name) values ('$chapterTitle', '$champions', '$slug','$description', '$image_filename')";
