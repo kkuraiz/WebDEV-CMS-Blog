@@ -77,7 +77,7 @@
           </p>
           <p>
             <label for="password">Password</label>
-            <input name="password" id="password"/>              
+            <input type="password" name="password" id="password"/>              
           </p>
           <p>
             <input type="submit" name="command" value="Login" /> 
