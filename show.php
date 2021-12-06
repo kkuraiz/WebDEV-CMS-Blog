@@ -43,9 +43,19 @@
         <?php if($_SESSION['isLogin'] === true): ?>
             <li><a href="admin_index.php">Home</a></li>
             <li><a href="edit.php?id=<?=$id?>">Edit</a></li>
+            <p></p>
+            <form action="admin_index.php" id="search_bar" method="post">
+                <input type="text" name="search" placeholder="Search..">
+                <button type="submit">Submit</button>
+            </form> 
         <?php else:?>
             <li><a href="index.php">Home</a></li>
-        <?php endif ?>                 
+            <p></p>
+            <form action="index.php" id="search_bar" method="post">
+                <input type="text" name="search" placeholder="Search..">
+                <button type="submit">Submit</button>
+            </form> 
+        <?php endif ?>               
     </ul>
     <div id="all_blogs">
         <div class="blog_post">
