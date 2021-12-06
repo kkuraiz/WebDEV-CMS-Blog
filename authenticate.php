@@ -10,11 +10,11 @@
   if(isset($_POST['command']))
   {
     if(!empty($_POST['username']) && !empty($_POST['password']))
-    {
-      //get username
+    {     
       $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
       $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
+      //get username
       $query = "SELECT username FROM admin_user";
       $statement = $db->prepare($query);
       $statement->execute();

@@ -150,7 +150,8 @@
 			{
 				if($cpassword === $password)
 				{
-					$query = "INSERT INTO admin_user(username, password, FName, LName, user_email) values ('$username', '$password', '$fname', '$lname', '$email')";
+					$hash_password = password_hash($password, PASSWORD_BCRYPT);
+					$query = "INSERT INTO admin_user(username, password, FName, LName, user_email) values ('$username', '$hash_password', '$fname', '$lname', '$email')";
 					$statement = $db->prepare($query);
 					$statement->execute();
 				}
