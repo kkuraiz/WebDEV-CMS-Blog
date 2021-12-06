@@ -5,6 +5,7 @@
 	session_start();
 	require('connect.php');
 	$_SESSION['isLogin'] = false;
+	$_SESSION['isVisited'] = false;
 
 	if(isset($_POST['search']))
 	{
@@ -81,7 +82,7 @@
 			<?php if($statement->rowCount() !== 0): ?>
 				<?php while ($hextech = $statement->fetch()): ?>
 					<div class='blog_post'>
-						<h2><a href="show.php?id=<?=$hextech['chapter_ID']?>"><?=$hextech['chapter_name']?></a></h2>
+						<h2><a href="show.php?id=<?=$hextech['chapter_ID']?>&slug=<?=$hextech['slug']?>"><?=$hextech['chapter_name']?></a></h2>
 					</div>
 					<div class='blog_content'>
 						<?php $dateTime = strtotime($hextech['release_date']); ?>						

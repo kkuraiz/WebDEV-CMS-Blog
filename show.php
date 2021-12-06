@@ -6,11 +6,16 @@
 	require('connect.php');
 
     $id = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+    $slug = filter_input(INPUT_GET,'slug',FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-    if($id === false)
+    if($id === false || $_SESSION['isVisited'] === true)
     {
         header("Location: index.php");  
         exit;
+    }
+    else
+    {
+        $_SESSION['isVisited'] = true;
     }
 
 	$query = "SELECT * FROM chapter WHERE chapter_ID = $id";
