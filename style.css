@@ -1,0 +1,74 @@
+label {
+    display: block;
+}
+input#title {
+    width: 40em;
+}
+input#champions {
+    width: 40em;
+}
+textarea {
+    height: 10em;
+    width: 55em;
+}
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    border: 1px solid grey;
+    padding: 5px 10px;
+}
+ul#menu {
+    padding-left: 0;    
+    list-style: none;
+    margin-bottom: 4px;
+}
+
+ul#menu li a.active {
+    border: 2px solid grey;
+    background: #999999;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul#menu li a:hover {
+    background: #AAAAAA;
+    color: black;
+}
+
+div.blog_post h2 a, div#header h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+div#header h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+div.blog_post h2 {
+    margin-bottom: 0;
+}
+
+div.blog_post p {
+    margin-top: 0;
+}
+
+div.blog_post div.blog_content p {
+    margin-top: 0.5em;
+}
+div#footer {
+    text-align: right;
+    margin-top: 10px;
+    
+}
+#wrapper {
+    width: 800px;
+    margin: 10px auto;
+    text-align: left;
+    border: 1px solid grey;
+    padding: 20px;
+    background: #EEEEEE;
+}
