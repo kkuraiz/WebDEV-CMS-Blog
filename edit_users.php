@@ -57,7 +57,7 @@
             </p>
             <p>
               <label for="password">Password</label>
-              <input type="password" name="password" id="login" value="<?=$hextech['password']?>" />
+              <input type="password" name="password" id="login" />
             </p>
             <p>
               <label for="fname">First Name</label>

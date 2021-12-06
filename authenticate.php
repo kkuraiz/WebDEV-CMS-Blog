@@ -38,7 +38,7 @@
       if (in_array($username, $username_array)) 
       {
         $key = array_search($username, $username_array);
-        if($password_array[$key] === $password)
+        if(password_verify($password, $password_array[$key]))
         {
           $_SESSION['isLogin'] = true;
           header("Location: admin_index.php");
