@@ -63,6 +63,10 @@
 				<li>Title</li>
 			<?php endif ?>
 		</ul>
+		<form id="search_bar">
+			<input type="text" placeholder="Search..">
+			<button type="submit">Submit</button>
+		</form>
 		<div id="all_blogs">
 			<?php if($statement->rowCount() !== 0): ?>
 				<?php while ($hextech = $statement->fetch()): ?>

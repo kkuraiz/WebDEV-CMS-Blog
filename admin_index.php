@@ -65,6 +65,10 @@
 				<li><a href="admin_index.php?sort=champion"
 					<?php if($_GET['sort'] === 'champion'):?> style="color:red" <?php endif ?>>Champions</a></li>
 			</ul>
+			<form id="search_bar">
+				<input type="text" placeholder="Search..">
+				<button type="submit">Submit</button>
+			</form>
 			<div id="all_blogs">
 				<?php if($statement->rowCount() !== 0): ?>
 					<?php while ($hextech = $statement->fetch()): ?>
