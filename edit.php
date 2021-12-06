@@ -59,6 +59,10 @@
             <input name="champions" id="title" value="<?=$hextech['champion_name']?>" />
           </p>
           <p>
+            <label for="title">Slug</label>
+            <input name="slug" id="title" value="<?=$hextech['slug']?>" />
+          </p>          
+          <p>
             <label for="content">Description</label>
             <textarea name="description" id="content">
 <?=$hextech['description']?>

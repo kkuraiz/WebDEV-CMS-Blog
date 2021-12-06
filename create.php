@@ -43,6 +43,10 @@
               <label for="champions">Champions appeared</label>
               <input name="champions" id="champions" />
             </p>
+          <p>
+            <label for="title">Slug</label>
+            <input name="slug" id="title"/>
+          </p>             
             <p>
               <label for="description">Description</label>
               <textarea name="description" id="description"></textarea>

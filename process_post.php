@@ -16,6 +16,7 @@
 	}
 	$chapterTitle = filter_input(INPUT_POST, 'chapterTitle', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$champions = filter_input(INPUT_POST, 'champions', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+	$slug = filter_input(INPUT_POST, 'slug', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$description = $_POST['description'];//filter_input(INPUT_POST, 'description', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -92,13 +93,13 @@
 			require('connect.php');
 			if($commandValue === "Create")
 			{
-				$query = "INSERT INTO chapter(chapter_name, champion_name, description, image_name) values ('$chapterTitle', '$champions', '$description', '$image_filename')";
+				$query = "INSERT INTO chapter(chapter_name, champion_name, slug, description, image_name) values ('$chapterTitle', '$champions', '$slug','$description', '$image_filename')";
 				$statement = $db->prepare($query);
 				$statement->execute();
 			}
 			elseif($commandValue === "Update")
 			{
-				$query = "UPDATE chapter SET chapter_name = '$chapterTitle', champion_name = '$champions', description = '$description', image_name = '$image_filename' WHERE chapter_ID = $id";
+				$query = "UPDATE chapter SET chapter_name = '$chapterTitle', champion_name = '$champions', slug = '$slug', description = '$description', image_name = '$image_filename' WHERE chapter_ID = $id";
 				$statement = $db->prepare($query);
 				$statement->execute();
 			}
