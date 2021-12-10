@@ -74,11 +74,11 @@
 			</ul>
 			<ul id="sorting">
 				<li>Sort by:</li>
-				<li><a href="admin_index.php?sort=title" 
+				<li id="sorting_inner"><a href="admin_index.php?sort=title" 
 					<?php if($_GET['sort'] === 'title'):?> style="color:red" <?php endif ?>>Title</a></li>
-				<li><a href="admin_index.php?sort=release"
+				<li id="sorting_inner"><a href="admin_index.php?sort=release"
 					<?php if($_GET['sort'] === 'release'):?> style="color:red" <?php endif ?>>Release Date</a></li>
-				<li><a href="admin_index.php?sort=champion"
+				<li id="sorting_inner"><a href="admin_index.php?sort=champion"
 					<?php if($_GET['sort'] === 'champion'):?> style="color:red" <?php endif ?>>Champions</a></li>
 			</ul>
 			<form id="search_bar" method="post">

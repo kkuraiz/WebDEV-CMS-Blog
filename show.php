@@ -83,7 +83,7 @@
             <?=$chapter['description']?>
 
             <?php if($chapter['image_name'] != ''): ?>
-                <img src= '<?= '.\uploads\\'.$chapter['image_name']?>'>
+                <img src= '<?= '.\uploads\\'.$chapter['image_name']?>' id='image'>
             <?php endif ?>
         </div>
     </div>

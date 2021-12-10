@@ -108,7 +108,7 @@
 				$statement->execute();
 				$test_data = $statement->fetch();
 
-				if($image_filename != $test_data['image.name'] && $image_filename != '')
+				if($image_filename != $test_data['image_name'] && $image_filename != '')
 				{
 					$query = "UPDATE chapter SET chapter_name = '$chapterTitle', champion_name = '$champions', slug = '$slug', description = '$description', image_name = '$image_filename' WHERE chapter_ID = $id";
 					$statement = $db->prepare($query);

@@ -59,16 +59,33 @@ div.blog_post p {
 div.blog_post div.blog_content p {
     margin-top: 0.5em;
 }
+
 div#footer {
     text-align: right;
-    margin-top: 10px;
-    
+    margin-top: 10px;   
 }
+
+li#sorting_inner {
+    list-style: none;
+}
+
+body{
+    background-image: url(".\\images\\background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img#image{
+    position: relative;
+    left: 150px;
+}
+
 #wrapper {
     width: 800px;
     margin: 10px auto;
     text-align: left;
-    border: 1px solid grey;
+    border: none;
     padding: 20px;
     background: #EEEEEE;
+    opacity: 80%;
 }

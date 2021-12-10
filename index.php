@@ -72,11 +72,11 @@
 		<ul id="sorting">
 			<li>Sort by:</li>
 			<?php if($sort === 'release'): ?>
-				<li>Release date</li>
+				<li id="sorting_inner">Release date</li>
 			<?php elseif($sort === 'champion'): ?>
-				<li>Champions</li>
+				<li id="sorting_inner">Champions</li>
 			<?php else: ?>
-				<li>Title</li>
+				<li id="sorting_inner">Title</li>
 			<?php endif ?>
 		</ul>
 		<form id="search_bar" method="post">
