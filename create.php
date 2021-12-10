@@ -1,5 +1,5 @@
 <!-------f----------
-
+    Take input to create a post
 ------------------->
 <?php
   session_start();    

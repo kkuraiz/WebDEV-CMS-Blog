@@ -1,5 +1,5 @@
 <!-------f----------
-
+	Show all link for public user
 ------------------->
 <?php
 	session_start();

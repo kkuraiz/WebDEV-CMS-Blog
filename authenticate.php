@@ -1,5 +1,5 @@
 <!-------f----------
-
+    Process and take input for user login
 ------------------->
 <?php
   session_start();

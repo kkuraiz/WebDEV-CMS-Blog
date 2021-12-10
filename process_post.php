@@ -1,5 +1,5 @@
 <!-------f----------
-
+	Process every command
 ------------------->
 <?php
 	session_start();

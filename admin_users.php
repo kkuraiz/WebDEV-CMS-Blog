@@ -1,3 +1,6 @@
+<!-------f----------
+    Show all admin users within the database
+------------------->
 <?php
     session_start();
     require('connect.php');

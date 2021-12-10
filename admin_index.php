@@ -1,5 +1,5 @@
 <!-------f----------
-
+	Show all links for admin
 ------------------->
 <?php
 	session_start();

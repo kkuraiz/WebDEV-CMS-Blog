@@ -1,5 +1,5 @@
 <!-------f----------
-
+    Take input for editing post
 ------------------->
 <?php
   session_start();

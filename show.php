@@ -1,5 +1,5 @@
 <!-------f----------
-
+    Show link detail
 ------------------->
 <?php
     session_start();
