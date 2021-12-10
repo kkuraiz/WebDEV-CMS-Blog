@@ -6,18 +6,20 @@
 
 	$fromEdit = false;
 
-	$commandValue = $_POST['command'];
-	$direction = $_POST['direction'];
+	$commandValue = $_POST['command'];//value can't be edit
+	$direction = $_POST['direction'];//value can't be edit
+
 	$id = filter_input(INPUT_POST,'id',FILTER_VALIDATE_INT);
 	if($id === false)
 	{
 		header("Location: index.php");  
 		exit;
 	}
+
 	$chapterTitle = filter_input(INPUT_POST, 'chapterTitle', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$champions = filter_input(INPUT_POST, 'champions', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$slug_raw = filter_input(INPUT_POST, 'slug', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-	$description = $_POST['description'];//filter_input(INPUT_POST, 'description', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+	$description = $_POST['description'];//not sanitize due to TINY
 	$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$cpassword = filter_input(INPUT_POST, 'cpassword', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -176,6 +178,11 @@
     <meta charset="utf-8">
     <title>My Blog</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<?php if($error === true): ?>

@@ -28,6 +28,11 @@
     <meta charset="utf-8">
     <title>Edit Chapter</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
     <script src="https://cdn.tiny.cloud/1/46we5e2tkb3cq5226hm8j4x57xm27s2lrwe0q9w1dktk08lw/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
     <script>
@@ -39,7 +44,7 @@
 </head>
 <body>
   <div id="wrapper">
-  <?php if($_SESSION['isLogin'] === true): ?>
+    <?php if($_SESSION['isLogin'] === true): ?>
     <div id="header">
       <h1><a href="index.php">Champion Story - Edit</a></h1>
     </div> 
@@ -52,18 +57,22 @@
           <legend>Edit Chapter</legend>
           <p>
             <label for="title">Chapter Name</label>
+            <br>
             <input name="chapterTitle" id="title" value="<?=$hextech['chapter_name']?>" />
           </p>
           <p>
             <label for="title">Champion Appeared</label>
+            <br>
             <input name="champions" id="title" value="<?=$hextech['champion_name']?>" />
           </p>
           <p>
             <label for="title">Slug</label>
+            <br>
             <input name="slug" id="title" value="<?=$hextech['slug']?>" />
           </p>          
           <p>
             <label for="content">Description</label>
+            <br>
             <textarea name="description" id="content">
 <?=$hextech['description']?>
             </textarea>

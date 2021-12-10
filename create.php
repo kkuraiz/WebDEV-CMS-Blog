@@ -2,9 +2,7 @@
 
 ------------------->
 <?php
-  session_start();
-
-       
+  session_start();    
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +11,11 @@
   <meta charset="utf-8">
   <title>Champion Story</title>
   <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdn.tiny.cloud/1/46we5e2tkb3cq5226hm8j4x57xm27s2lrwe0q9w1dktk08lw/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
   <script>
@@ -37,14 +40,17 @@
             <legend>New Chapter</legend>
             <p>
               <label for="title">Chapter Title</label>
+              <br>
               <input name="chapterTitle" id="title" />
             </p>          
             <p>
               <label for="champions">Champions appeared</label>
+              <br>
               <input name="champions" id="champions" />
             </p>
           <p>
             <label for="title">Slug</label>
+            <br>
             <input name="slug" id="title"/>
           </p>             
             <p>
