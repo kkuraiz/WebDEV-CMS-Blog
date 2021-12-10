@@ -6,7 +6,7 @@
 	require('connect.php');
 
   $id = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
-  
+
   if($id === false || !isset($id) || $_SESSION['isVisitedEdit'] === true)
   {
     header("Location: admin_index.php");  
@@ -80,11 +80,13 @@
           </p>
           <p>
             <label for="file">Image:</label>
+
             <?php if($hextech['image_name'] != ''): ?>
               <img src= '<?= '.\uploads\\'.$hextech['image_name']?>'>
               <br>
-              <input type="submit" name="command" value="DeleteImage" onclick="return confirm('Are you sure you wish to delete this image?')" />               
-            <?php endif ?>           
+              <input type="submit" name="command" value="DeleteImage" onclick="return confirm('Are you sure you wish to delete this image?')" />       
+            <?php endif ?>  
+
             <input type="file" name="image" id="file">
           </p>
           <p>

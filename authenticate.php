@@ -92,8 +92,7 @@
             <input type="password" name="password" id="password"/>              
           </p>
           <p>
-            <input type="submit" name="command" value="Login" /> 
-            <a href="index.php"><input type="button" name="return" value="Return"></a>
+            <input type="submit" name="command" value="Login" />
           </p>
           <p><?= $errorMsg ?></p>
         </fieldset>

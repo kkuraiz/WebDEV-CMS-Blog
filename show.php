@@ -11,8 +11,16 @@
 
     if($id === false || $_SESSION['isVisited'] === true)
     {
-        header("Location: index.php");  
-        exit;
+        if($_SESSION['isLogin'] === false)
+        {
+            header("Location: index.php");  
+            exit;
+        }
+        else
+        {
+            header("Location: admin_index.php");  
+            exit;
+        }
     }
     else
     {
