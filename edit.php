@@ -6,6 +6,7 @@
 	require('connect.php');
 
   $id = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+  
   if($id === false || !isset($id) || $_SESSION['isVisitedEdit'] === true)
   {
     header("Location: admin_index.php");  

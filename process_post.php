@@ -6,8 +6,8 @@
 
 	$fromEdit = false;
 
-	$commandValue = $_POST['command'];//value can't be edit
-	$direction = $_POST['direction'];//value can't be edit
+	$commandValue = $_POST['command'];//hidden value, value can't be edit
+	$direction = $_POST['direction'];//hidden value, value can't be edit
 
 	$id = filter_input(INPUT_POST,'id',FILTER_VALIDATE_INT);
 	if($id === false)
@@ -25,7 +25,8 @@
 	$cpassword = filter_input(INPUT_POST, 'cpassword', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$fname = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$lname = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-	$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+	$filter_email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+	$email = filter_var($filter_email, FILTER_VALIDATE_EMAIL);
 
 
 	$error = false;
