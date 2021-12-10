@@ -28,6 +28,7 @@
             <h1><a href="admin_users.php">Admin Users</a></h1>
         </div>
         <ul id="menu">
+            <li><a href="admin_index.php" >Home</a></li>
             <li><a href="edit_users.php">Register</a></li>
             <li><a href="authenticate.php">Logout</a></li>
         </ul>
