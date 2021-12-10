@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2021 at 04:37 AM
+-- Generation Time: Dec 10, 2021 at 05:13 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -66,15 +66,15 @@ CREATE TABLE `chapter` (
 --
 
 INSERT INTO `chapter` (`chapter_ID`, `slug`, `chapter_name`, `champion_name`, `description`, `release_date`, `image_name`) VALUES
-(5, '', 'Kin of the Stained Blade', 'Yasuo, Yone', 'Not forgiven. Not forgotten. See the story of brothers torn asunder.', '2021-11-11 19:22:59', ''),
-(6, '', 'Tales of Runeterra: Bilgewater', 'Twisted Fate, Graves, Miss Fortune', 'Down on the slaughter docks, Miss Fortune springs a trap for wanted criminals Twisted Fate and Graves&hellip; but soon finds the tables turned against her.', '2021-11-11 19:24:15', ''),
-(7, '', 'Tales of Runeterra: Noxus', 'Darius', 'Darius and his victorious warhosts demand that the king of Urtis surrender his throne, offering every citizen&mdash;from the highest noble to the lowliest servant&mdash;a place in the Noxian empire.', '2021-11-11 19:27:03', ''),
-(8, '', 'Tales of Runeterra: Ionia', 'Akali, Shen', 'Akali learns an important lesson from her former Kinkou master, Shen, when they encounter a young woodcutter upsetting the balance of Ionia.', '2021-11-11 19:27:59', ''),
-(9, '', 'Tales of Runeterra: Don&#039;t Mess With Yordles', 'Teemo, Tristana, Corki, Lulu, Graves, Twisted Fate', '<p>When Teemo goes missing, Tristana finds plenty of volunteers to help bring him home to Bandle City&mdash;in all the ways that only yordles can!</p>', '2021-11-11 19:29:20', 'Astronaut_Teemo_profileicon.png'),
-(10, '', 'As We Fall', 'Varus', 'The back story of Varus, The Arrow of Retribution', '2021-11-11 19:30:36', ''),
-(11, '', 'Xayah and Rakan: Wild Magic', 'Xayah, Rakan, Zed', '<p>Restoring the wild magic of Ionia won&rsquo;t be easy when a deadly enemy lurks in the shadows.</p>', '2021-11-11 19:31:46', 'xayah.jpg'),
-(12, '', 'Ekko: Seconds', 'Ekko', 'Dive in the backstory of Ekko, The Boy Who Shattered Time', '2021-11-11 19:32:55', ''),
-(34, '', 'teemo', 'teemo', '<p>teemo</p>', '2021-11-26 15:45:34', 'teemo.jpg');
+(5, 'yasuo-yone', 'Kin of the Stained Blade', 'Yasuo, Yone', 'Not forgiven. Not forgotten. See the story of brothers torn asunder.', '2021-11-11 19:22:59', ''),
+(6, 'tf', 'Tales of Runeterra: Bilgewater', 'Twisted Fate, Graves, Miss Fortune', 'Down on the slaughter docks, Miss Fortune springs a trap for wanted criminals Twisted Fate and Graves&hellip; but soon finds the tables turned against her.', '2021-11-11 19:24:15', ''),
+(7, 'darius', 'Tales of Runeterra: Noxus', 'Darius', 'Darius and his victorious warhosts demand that the king of Urtis surrender his throne, offering every citizen&mdash;from the highest noble to the lowliest servant&mdash;a place in the Noxian empire.', '2021-11-11 19:27:03', ''),
+(8, 'akali', 'Tales of Runeterra: Ionia', 'Akali, Shen', 'Akali learns an important lesson from her former Kinkou master, Shen, when they encounter a young woodcutter upsetting the balance of Ionia.', '2021-11-11 19:27:59', ''),
+(9, 'Teemo-Tristana', 'Tales of Runeterra: Don&#039;t Mess With Yordles', 'Teemo, Tristana, Corki, Lulu, Graves, Twisted Fate', '<p>When Teemo goes missing, Tristana finds plenty of volunteers to help bring him home to Bandle City&mdash;in all the ways that only yordles can!</p>', '2021-11-11 19:29:20', '0434180048e47e8d6ed39d844a649758.jpg'),
+(10, 'Varus', 'As We Fall', 'Varus', 'The back story of Varus, The Arrow of Retribution', '2021-11-11 19:30:36', ''),
+(11, 'xayah', 'Xayah and Rakan: Wild Magic', 'Xayah, Rakan, Zed', '<p>Restoring the wild magic of Ionia won&rsquo;t be easy when a deadly enemy lurks in the shadows.</p>', '2021-11-11 19:31:46', 'xayah.jpg'),
+(12, 'ekko', 'Ekko: Seconds', 'Ekko', 'Dive in the backstory of Ekko, The Boy Who Shattered Time', '2021-11-11 19:32:55', ''),
+(34, 'teem', 'teemo', 'teemo', '<p>teemo</p>', '2021-11-26 15:45:34', '');
 
 --
 -- Indexes for dumped tables
@@ -106,7 +106,7 @@ ALTER TABLE `admin_user`
 -- AUTO_INCREMENT for table `chapter`
 --
 ALTER TABLE `chapter`
-  MODIFY `chapter_ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `chapter_ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
